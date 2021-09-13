@@ -1,0 +1,85 @@
+---
+title: "Homework 01"
+author: "Haofei Xu"
+date: "9/13/2021"
+output:
+  html_document:
+    theme: readable
+    toc: yes
+---
+
+## Exercise 1 (Markdown)
+Using Markdown syntax, create a numbered list with your first name in normal text as the first item and your last name in bold text as the second item.
+
+1. Haofei
+2. **Xu**
+
+## Exercise 2 (Personal survey, Markdown)
+Select all of the following that you feel are must-haves in order for your learning to be successful.
+
+- [x] i. lecture videos
+- [x] ii. course notes
+- [x] iii. assignments
+- [x] iv. assignment solutions
+- [x] v. feedback on the assignments
+- [x] vi. office hours
+- [x] vii. discussions with classmates
+
+## Exercise 3 (Personal survey, Markdown)
+What is the highest numbered STAT course you have taken prior to this semester? For example, STAT 510 is higher than STAT 480.
+
+**STAT 420**
+
+## Exercise 4 (Syllabus, Markdown)
+All assignments are assumed to be in which time zone?
+
+**Central Time**
+
+## Exercise 5 (Syllabus, Markdown) 
+In a Markdown unordered list, write the names of the course staff.
+
+- Instructor - Christopher Kinson (kinson2@illinois.edu)
+- Teaching Assistant (TA) - Jim Yan (yiciyan2@illinois.edu)
+- Teaching Assistant (TA) - Jaideep Mahajan (jaideep3@illinois.edu)
+
+## Exercise 6 (Prior knowledge, Markdown) 
+Consider the information in the image below and the image itself as a data set. Make 2 Markdown lists: one list contains 3 things you observe about the data set, and the other list contains 3 questions about the data set (i.e. things you want to know about the data).
+
+### Things you observe about the data set
+- There is one person (Prof. Kinson) on this image
+- There is one grill on this image
+- There is two cars on this image
+
+### Things you want to know about the data
+- How many sausages there?
+- How many calories are there in one sausage?
+- How much joule of heat produced by the coals?
+
+## Exercise 7 (Prior knowledge, Markdown) 
+Considering the image in Problem 6 and using Markdown, create a Markdown table that shows how you would organize the data information into tabular form with at least 10 rows and at least 2 columns with column names. Your table should have a header row that contains the column names and should be 10 rows (excluding header) and 2 columns.
+
+| Objects | Properties |
+| ------- | ------- |
+| Number of People | 1 |
+| Gender | Male|
+| Number of Grills  | 1 |
+| Number of Cars   | 2 |
+| Type of first Vehicles | SUV |
+| Type of second Vehicles | Sedan |
+| Number of Trees   | 1 |
+| Number of Houses  | 2 |
+| Number of bags of Coals | 1 |
+| Weather of the day | Sunny |
+
+## Exercise 8 (Prior knowledge, Markdown)
+Consider the information in the image below and the image itself as a data set. Make 2 Markdown lists: one list contains 3 things you observe about the data set, and the other list contains 3 questions about the data set (i.e. things you want to know about the data).
+
+### Things you observe about the data set
+- Each row of the grid has digits from 1 to 9
+- Each column of the grid has digits from 1 to 9
+- Each of the 9 subgrids contains digits from 1 to 9  
+
+### Things you want to know about the data
+- How many such filled grids can be, satisfying all these rules above?
+- What does the number 47 mean above the grid?
+- Does the sum of one subgird inderdependently relate to other subgrids?
