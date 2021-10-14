@@ -89,11 +89,10 @@ speed_dating %>%
 
 **#5** How many interracial (dater and datee race is not the same) matches occur? Use the imported data in Problem **#2**, the information in the speed dating data key, and a programming language applying data management concepts to answer the questions. **Your answer should be in Markdown syntax and a code chunk should show the result as evidence.**
 
-116 interracial matches occur.
+24 interracial matches occur, however, we need to divided them by 2, since two people match each other, and only one match should be counted. So, the answer is **12**.
 
 ```{r}
 speed_dating %>%
-  count(samerace) %>%
-  filter(samerace == 0)
+  count(samerace == 0 & match == 1)
 ```
 
