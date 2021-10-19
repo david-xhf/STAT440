@@ -56,7 +56,7 @@ FALSE. **Unstructured**
 
 **#4** The `sum()` function is an example of **vectorization** because it takes a vector as input and returns a single summary value. If the text in bold is the word or phrase that makes the statement true, then write TRUE below in all caps. If the text in bold is the word or phrase that makes the statement false, then write FALSE below in all caps followed by a period, and write the correct term in bold text after the period. For example, FALSE. **newword**
 
-**summarization**
+FALSE. **summarization**
 
 **#5** There are three ways to interact with this course: (1) using GHE in the browser, (2) using Git from the command line, (3) using a Git client such as RStudio or Jupyter Lab via an extension. If the statement is true, then write TRUE below in all caps. Otherwise, write FALSE below in all caps.
   
