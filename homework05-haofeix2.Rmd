@@ -91,6 +91,7 @@ ccso_jail_data$`booking_date` <- as.character(ccso_jail_data$`booking_date`)
 ccso_jail_data$`booking_time` <- as.character(ccso_jail_data$`booking_time`)
 ccso_jail_data$`released_date` <- as.character(ccso_jail_data$`released_date`)
 ccso_jail_data$`released_time` <- as.character(ccso_jail_data$`released_time`)
+ccso_jail_data$`booking_number` <- as.character(ccso_jail_data$`booking_number`)
 str(ccso_jail_data)
 ```
 
@@ -134,14 +135,15 @@ head(cc, 10)
 **You must answer in Markdown syntax in a complete sentence and show code as evidence of your answer. You must use SQL to complete this problem.**
 
 ```{r}
+library(sqldf)
 sqldf("SELECT COUNT(count) AS ANSWER
-       FROM (SELECT count(jacket_number) AS count, jacket_number 
+       FROM (SELECT count(DISTINCT booking_date) AS count, jacket_number 
              FROM ccso_jail_data 
              GROUP BY jacket_number 
              HAVING count > 1)
       ")
 ```
-There are 2,324 such people.
+There are 909 such people.
 
 **#8** (Regular Expressions and String Manipulation) Beginning with the NBA data sets in **Problem 5** and the information in the data key in **Problem 5**, use a programming language to split the Player column of the fourth NBA dataset into two new columns: PlayerID and PlayerName such that the original Player column is removed and these two new columns are the first two columns of the fourth NBA data. **These two columns should look similar to the first two columns of the first NBA dataset.** Now, print the first 10 rows of the fourth and first NBA datasets, respectively. **SQL is not required for this problem.**
 

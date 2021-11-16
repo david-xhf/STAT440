@@ -449,9 +449,10 @@ summary {
 ccso_jail_data$`booking_time` &lt;- as.character(ccso_jail_data$`booking_time`)
 ccso_jail_data$`released_date` &lt;- as.character(ccso_jail_data$`released_date`)
 ccso_jail_data$`released_time` &lt;- as.character(ccso_jail_data$`released_time`)
+ccso_jail_data$`booking_number` &lt;- as.character(ccso_jail_data$`booking_number`)
 str(ccso_jail_data)</code></pre>
 <pre><code>## spec_tbl_df [11,082 × 40] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-##  $ booking_number            : num [1:11082] 2.02e+11 2.02e+11 2.02e+11 2.02e+11 2.02e+11 ...
+##  $ booking_number            : chr [1:11082] &quot;201700001317&quot; &quot;201800002888&quot; &quot;201900000001&quot; &quot;201900000002&quot; ...
 ##  $ booking_date              : chr [1:11082] &quot;2/26/2019&quot; &quot;5/3/2019&quot; &quot;1/1/2019&quot; &quot;1/1/2019&quot; ...
 ##  $ booking_time              : chr [1:11082] &quot;08:42:42&quot; &quot;20:07:41&quot; &quot;00:25:06&quot; &quot;02:36:57&quot; ...
 ##  $ Last_name                 : chr [1:11082] &quot;CAMERON&quot; &quot;MARSHALL&quot; &quot;STURKEY&quot; &quot;KAVANAGH&quot; ...
@@ -693,15 +694,16 @@ head(cc, 10)</code></pre>
 <li>How many people booked into jail are recidivists?</li>
 </ul>
 <p><strong>You must answer in Markdown syntax in a complete sentence and show code as evidence of your answer. You must use SQL to complete this problem.</strong></p>
-<pre class="r"><code>sqldf(&quot;SELECT COUNT(count) AS ANSWER
-       FROM (SELECT count(jacket_number) AS count, jacket_number 
+<pre class="r"><code>library(sqldf)
+sqldf(&quot;SELECT COUNT(count) AS ANSWER
+       FROM (SELECT count(DISTINCT booking_date) AS count, jacket_number 
              FROM ccso_jail_data 
              GROUP BY jacket_number 
              HAVING count &gt; 1)
       &quot;)</code></pre>
 <pre><code>##   ANSWER
-## 1   2324</code></pre>
-<p>There are 2,324 such people.</p>
+## 1    909</code></pre>
+<p>There are 909 such people.</p>
 <p><strong>#8</strong> (Regular Expressions and String Manipulation) Beginning with the NBA data sets in <strong>Problem 5</strong> and the information in the data key in <strong>Problem 5</strong>, use a programming language to split the Player column of the fourth NBA dataset into two new columns: PlayerID and PlayerName such that the original Player column is removed and these two new columns are the first two columns of the fourth NBA data. <strong>These two columns should look similar to the first two columns of the first NBA dataset.</strong> Now, print the first 10 rows of the fourth and first NBA datasets, respectively. <strong>SQL is not required for this problem.</strong></p>
 <pre class="r"><code>stint4 &lt;- stint4 %&gt;% separate(Player, c(&quot;PlayerName&quot;, &quot;PlayerID&quot;), &quot;\\\\&quot;) %&gt;% relocate(PlayerName, .after = PlayerID)
 head(stint4, 10)</code></pre>
