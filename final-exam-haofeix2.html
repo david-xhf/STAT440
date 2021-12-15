@@ -812,13 +812,13 @@ tail(fbi16, 25)</code></pre>
 ##   Violent_crime_ratePer100K
 ##                       &lt;dbl&gt;
 ## 1                      377.</code></pre>
-<pre class="r"><code>fbi16 %&gt;%
+<pre class="r"><code>final14 %&gt;%
   filter(Violent_crime_ratePer100K &gt; 376.8475   ) %&gt;%
   count()</code></pre>
 <pre><code>## # A tibble: 1 × 1
 ##       n
 ##   &lt;int&gt;
-## 1   245</code></pre>
+## 1   116</code></pre>
 <p><strong>#18</strong> Is the average for each of the 9 crime rates per 100K inhabitants within 10 units (above or below) of the national crime rates per 100K inhabitants? For which crime rates, do these two values (average vs national) differ beyond 10 units? <strong>Your answer to the question should be written using Markdown syntax, and you should include executable code with a printed result as evidence of your answer.</strong></p>
 <pre class="r"><code>new &lt;- rep(1,11)
 fbi18 = final14

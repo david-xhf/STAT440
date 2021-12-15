@@ -290,7 +290,7 @@ tail(fbi16, 25)
 ```{r}
 fbi16[327,3]
 
-fbi16 %>%
+final14 %>%
   filter(Violent_crime_ratePer100K > 376.8475	) %>%
   count()
 ```
